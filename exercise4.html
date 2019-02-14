@@ -1,0 +1,21 @@
+<!-- Disable submit button using jquery attr method -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disable submit button</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<input type="submit" id="btn" value="After click this button will be disabled"></input>
+<script>
+$(document).ready(function(){
+$("#btn").click(function(){
+	$("#btn").attr("disabled", "disabled");
+});
+});
+</script>
+</body>
+</html>

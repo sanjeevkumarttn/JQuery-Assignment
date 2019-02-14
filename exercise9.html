@@ -1,0 +1,29 @@
+<!--Get dropdown selected value on onchanage event and append in div container-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<head>
+<body>
+<span>Select your choice: </span>
+ 	<select id="fruits" name="fruits" >
+		<option value="Apple">Apple</option>
+		<option value="Orange">Orange</option>
+		<option value="Banana">Banana</option>				  
+	</select> 
+<div id="div">
+<h3>Your choices apears below:</h3>
+</div>
+<script>
+$(document).ready(function(){
+	$("select#fruits").change(function(){
+	var selectedFruit = $(this).children("option:selected").val();
+	$("#div").append("<p>You like: "+selectedFruit+"</p>");
+});
+});
+</script>
+</body>
+</html>
+

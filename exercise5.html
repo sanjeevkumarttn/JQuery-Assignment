@@ -1,0 +1,32 @@
+<!--Change the font size of ".target" which has parent element with id name "#main"-->
+
+<html>
+<head>
+<title>Changing Size</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+.target{
+	padding:10px;
+	color:red;
+	display:inline-block;
+}
+</style>
+</head>
+<body>
+<div id="main">
+	<p class="target">Its parent id name is 'main'</p>
+</div>
+
+<div id="div1">
+	<p class="target">Its parent id name is 'div1'</p>
+</div>
+<button id="btn" value="Click me">Click me</button>
+<script>
+	$("#btn").click(function(){
+	$('#main > .target').css("font-size","30px");
+});
+</script>
+
+</body>
+</html>

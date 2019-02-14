@@ -1,0 +1,31 @@
+<!-- Get the max height of elements using jquery each method -->
+
+<!DOCTYPE html>
+<html>
+<head>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+		div{padding:10px;}
+	</style>
+<head>
+<body>
+
+
+	<div id="div1" style="height:50px;">Height of this div element is 50px</div>
+	<div id="div2" style="height:70px;">Height of this div element is 70px</div>
+	<div id="div3" style="height:90px;">Height of this div element is 90px</div>
+	<button id="btn">Check height of each element</button>
+
+
+<script>
+$(document).ready(function(){
+	$("#btn").click(function(){
+		$( "div" ).each(function( index ) {
+			var height = $(this).height()
+			$('body').append("<p>div"+(parseInt(index)+1) + " height is : " + $( this ).height()+"px</p>")
+		});
+	});
+});
+</script>
+</body>
+</html>

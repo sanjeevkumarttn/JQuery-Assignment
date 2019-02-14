@@ -1,0 +1,27 @@
+<!-- We have bind a click funtion to parent div but we want stop it from performing when user clicks on its child li -->
+
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body>
+<div id="div1">
+This is a div tag.
+<li style="list-style-type: none; margin:10px 0px;">This is li tag child of div tag.</li>
+</div>
+<script>
+$(document).ready(function(){
+	$("li").click(function(event){
+	event.stopPropagation();
+	alert("The li element was clicked.");
+	});
+
+	 $("div").click(function(){
+    	alert("The div element was clicked.");
+  	});
+
+});
+</script>
+
+</body>
+</html>

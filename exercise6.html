@@ -1,0 +1,18 @@
+<!--After page load change the HTML of div element with "p" element-->
+
+<html>
+<head>
+<title>Changing HTML element</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body>
+<div>
+This is a div element.
+</div>
+<script>
+$(document).ready(function(){
+alert('Note that the div element is going to be replaced by p element')
+$("div").replaceWith("<p>div element is changed by 'p' element</p>")
+});
+</script>
+</body>
+</html>

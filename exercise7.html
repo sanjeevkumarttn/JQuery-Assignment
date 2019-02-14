@@ -1,0 +1,20 @@
+<!--Bind a click function to an "click" element and append next "click" next to it.-->
+
+<html>
+<head>
+<title>Binding click function</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<button id="btn">Click me</button>
+<script>
+$(document).ready(function(){
+	var clickElement = '<button id="btn2">Click me</button>';
+	$("#btn").bind("click",function(){
+	$("#btn").after(clickElement)
+});
+
+});
+</script>
+</body>
+</html>

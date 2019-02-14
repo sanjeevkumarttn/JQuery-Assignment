@@ -1,0 +1,23 @@
+<!-- Click event not working on element which added dynamicly or via script, make it work using .on method -->
+
+<html>
+<head>
+<title>Enabling click function</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<button id="btn">Click me</button>
+<script>
+$(document).ready(function(){
+	var clickElement = '<button id="btn2">Click me</button>';
+	$("#btn").bind("click",function(){
+	$("#btn").after(clickElement)
+	$("#btn2").on("click", function(){
+	alert("Event occured");
+});
+});
+
+});
+</script>
+</body>
+</html>

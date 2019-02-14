@@ -1,0 +1,57 @@
+<!-- Create a dropdown menu using hover method in jquery -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+		.dropdown-menu {
+		  display:none;
+		margin-left:-10px;
+		padding:10px;
+		}
+		ul {
+  			list-style-type: none;
+		}
+		
+		a{
+			text-decoration:none;
+			color:white;
+			
+		}
+		.dropdown{padding:10px;
+			background-color:#c7c9cc;
+			color:#ffffff;
+			width:200px;	
+					
+			}
+		li{padding:5px 0px;}
+		
+</style>
+<head>
+<body>
+<ul>
+<li class="dropdown">
+    <a href="#">W3School</a>
+    <ul class="dropdown-menu" role="menu" style="">
+      <li class="deco"><a href="https://www.w3schools.com/html/default.asp">HTML</a></li>
+      <li class="deco"><a href="https://www.w3schools.com/css/default.asp" class="deco">CSS</a></li>
+      <li class="deco"><a href="https://www.w3schools.com/js/default.asp" class="deco">JavaScript</a></li>               
+    </ul>
+</li>
+<ul>
+<script>
+$(document).ready(function() {
+    $( '.dropdown' ).hover(
+        function(){
+            $(this).children('.dropdown-menu').slideDown(200);
+        },
+        function(){
+            $(this).children('.dropdown-menu').slideUp(200);
+        }
+    );
+}); 
+</script>
+</body>
+</html>

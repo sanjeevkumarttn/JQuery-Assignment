@@ -1,0 +1,49 @@
+<!-- Change the color of element which class name end with "-new" -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change color class ends with '-new'</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+	.class1-new{
+	padding:10px;
+	font-size:20px;
+}
+
+.class2-new{
+	padding:10px;
+	font-size:25px;
+}
+
+.myClass{
+	padding:10px;
+	font-size:30px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="class1-new">
+	This text accessing class: "class1-new".
+</div>
+
+<div class="class2-new">
+	This text accessing class: "class2-new".
+</div>
+
+<div class="myClass">
+	This text accessing class: "myClass".
+</div>
+<button id="btn">Click me</button>
+<script>
+	$("#btn").click(function(){
+	$("div[class$='-new']").css("color", "#00FFFF");
+});
+</script>
+
+</body>
+</html>

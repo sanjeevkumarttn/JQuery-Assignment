@@ -1,0 +1,38 @@
+<!--Select a ID name "#test" and add class "load" when DOM is loaded-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Adding Claas by JQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+#id{
+	padding:10px;
+	font-size:30px;
+}
+
+.load{
+	color:red;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<p id="test">This text color will change after adding 'load' class</p>
+<button id="btn" >Click me to add class</button>
+<script>
+function ready(){
+ $("#btn").click(function () {
+		
+	  $('#test').addClass('load');
+	  
+    });}
+document.addEventListener("DOMContentLoaded", ready);	
+</script>
+
+</body>
+</html>
